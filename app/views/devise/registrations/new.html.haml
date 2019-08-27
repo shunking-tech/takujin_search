@@ -13,6 +13,14 @@
       = f.email_field :email
   .field
     .field-label
+      = f.label :purpose
+    .field-input
+      = f.radio_button(:purpose, "1")
+      チームを探したい
+      = f.radio_button(:purpose, "2")
+      メンバーを探したい
+  .field
+    .field-label
       = f.label :password
       %i (英数字6文字以上)
     .field-input

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_05_083707) do
+ActiveRecord::Schema.define(version: 2019_09_05_104716) do
 
   create_table "members", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "gender", null: false
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 2019_09_05_083707) do
     t.integer "want_activity_times"
     t.text "text"
     t.boolean "searching"
+    t.integer "user_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|

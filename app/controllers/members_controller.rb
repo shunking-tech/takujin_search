@@ -21,6 +21,18 @@ class MembersController < ApplicationController
     @member = Member.find(params[:id])
   end
 
+  # メンバーの情報を編集するアクション
+  def edit
+    @member = Member.find(params[:id])
+  end
+
+  # メンバーの情報を更新するアクション
+  def update
+    @member = Member.find(params[:id])
+    @member.update(member_params)
+    redirect_to member_path(@member)
+  end
+
 
   private
 

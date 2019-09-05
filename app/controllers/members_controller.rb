@@ -5,4 +5,9 @@ class MembersController < ApplicationController
 
   end
 
+  # メンバーを新規作成するフォームを表示するアクション
+  def new
+
+  end
+
 end

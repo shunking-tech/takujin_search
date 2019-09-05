@@ -12,7 +12,13 @@ class MembersController < ApplicationController
 
   # メンバーを新規登録するアクション
   def create
-    member = Member.create(member_params)
+    @member = Member.create(member_params)
+    redirect_to member_path(@member)
+  end
+
+  # メンバーの情報を表示するアクション
+  def show
+    @member = Member.find(params[:id])
   end
 
 

@@ -7,7 +7,7 @@ class MembersController < ApplicationController
 
   # メンバーを新規作成するフォームを表示するアクション
   def new
-
+    @member = Member.new
   end
 
 end

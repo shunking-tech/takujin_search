@@ -1,0 +1,32 @@
+.form-row.mb-3
+  .col-auto
+    = f.label :searching, "チーム探し中？："
+    = f.select :searching, [["はい", true], ["いいえ", false]], {},  {class: "custom-select mr-sm-2"}
+.form-row.mb-3
+  .col-auto
+    = f.label :gender, "性別："
+    = f.select :gender, [["男", 1], ["女", 2]], {},  {class: "custom-select mr-sm-2"}
+.form-row.mb-3
+  .col-auto
+    = f.label :area, "地域："
+    = f.select :area, [["大阪", 1], ["東京", 2]], {},  {class: "custom-select mr-sm-2"}
+.form-row.mb-3
+  .col-auto
+    = f.label :experience_period, "経験年数："
+    = f.select :experience_period, [["1年未満", 1], ["1~3年", 2], ["3~6年", 3], ["6~10年", 4], ["10年以上", 5]], {},  {class: "custom-select mr-sm-2"}
+.form-row.mb-3
+  .col-auto
+    = f.label :performance, "実績："
+    = f.select :performance, [["試合に出たことが無い", 1], ["ローカルの大会に出たら大体は真ん中より下", 2], ["ローカルの大会に出たら大体は真ん中くらい", 3], ["ローカルの大会に出たら大体は真ん中より上", 4], ["ローカルの大会で上位入賞経験あり", 5], ["全国大会出場経験あり", 6]], {},  {class: "custom-select mr-sm-2"}
+.form-row.mb-3
+  .col-auto
+    = f.label :motivation, "モチベーション："
+    = f.select :motivation, [["運動不足解消", 1], ["たまに大会に出たい", 2], ["大会に出て、より上位を目指したい", 3]], {},  {class: "custom-select mr-sm-2"}
+.form-row.mb-3
+  .col-auto
+    = f.label :want_activity_times, "希望の活動頻度："
+    = f.select :want_activity_times, [["月に1回程度", 1], ["2週間に1回程度", 2], ["1週間に1回程度", 3], ["1週間に2回以上", 4]], {},  {class: "custom-select mr-sm-2"}
+.form-row.mb-3
+  .col-6
+    = f.label :text, "コメント(自己PR、自己紹介等)："
+    = f.text_area :text, class: "form-control"

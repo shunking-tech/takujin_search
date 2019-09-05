@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 2019_09_05_083707) do
     t.integer "performance"
     t.integer "motivation"
     t.integer "want_activity_times"
+    t.text "text"
     t.boolean "searching"
   end
 

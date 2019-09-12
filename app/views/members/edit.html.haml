@@ -1,5 +1,7 @@
-= form_for @member do |f|
+.container.p-5
 
-  = render 'members/form', f: f
+  = form_for @member do |f|
 
-  = f.submit 'プロフィールを変更'
+    = render 'members/form', f: f
+
+    = f.submit 'プロフィールを変更'

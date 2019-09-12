@@ -2,6 +2,9 @@
   = f.label :searching, "チーム探し中？："
   = f.select :searching, [["はい", true], ["いいえ", false]], {},  {class: "custom-select mr-sm-2"}
 .form-group
+  = f.label :nickname, "ニックネーム："
+  = f.text_field :nickname, class: "form-control"
+.form-group
   = f.label :gender, "性別："
   = f.select :gender, [["男", 1], ["女", 2]], {},  {class: "custom-select mr-sm-2"}
 .form-group

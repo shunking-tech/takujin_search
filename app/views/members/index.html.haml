@@ -1,4 +1,4 @@
 .container
-  = render 'members/member'
-  = render 'members/member'
-  = render 'members/member'
+
+  - @members.each do |m|
+    = render 'member', member: m

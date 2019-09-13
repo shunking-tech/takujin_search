@@ -2,7 +2,7 @@ class MembersController < ApplicationController
 
   # メンバ一覧を表示するアクション
   def index
-
+    @members = Member.all
   end
 
   # メンバーを新規作成するフォームを表示するアクション

@@ -1,12 +1,41 @@
 .media.bg-light.shadow-sm.position-relative.mb-3
   %img.mr-3{alt: "...", src: ""}/
   .media-body
-    %h5.mt-0 メンバー名
+    %h5.mt-0
+      = member.nickname
     %ul
       %li
         経験年数:
+        - if member.experience_period == 1
+          1年未満
+        - elsif member.experience_period == 2
+          1~3年
+        - elsif member.experience_period == 3
+          3~6年
+        - elsif member.experience_period == 4
+          6~10年
+        - elsif member.experience_period == 5
+          10年以上
+        - else
+          未設定
       %li
         性別:
+        - if member.gender == 1
+          男性
+        - elsif member.gender == 2
+          女性
+        - else
+          未設定
       %li
-        地域:
-    = link_to '詳細を見る', '#', class: 'stretched-link'
+        モチベーション:
+        - if member.motivation == 1
+          運動不足解消
+        - elsif member.motivation == 2
+          たまに大会に出たい
+        - elsif member.motivation == 3
+          大会に出て、より上位を目指したい
+        - else
+          未設定
+    
+    - if user_signed_in?
+      = link_to '詳細を見る', '#', class: 'stretched-link'

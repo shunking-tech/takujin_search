@@ -2,8 +2,8 @@
   = f.label :searching, "メンバー募集中？："
   = f.select :searching, [["はい", true], ["いいえ", false]], {},  {class: "custom-select"}
 .form-group
-  = f.label :name, "チーム名："
-  = f.text_field :name, class: "form-control" 
+  = f.label :team_name, "チーム名："
+  = f.text_field :team_name, class: "form-control" 
 .form-group
   = f.label :motivation, "モチベーション："
   = f.select :motivation, [["運動不足解消", 1], ["たまに大会に出たい", 2], ["大会に出て、より上位を目指したい", 3]], {},  {class: "custom-select"}

@@ -1,4 +1,4 @@
 .container
-  = render "teams/team"
-  = render "teams/team"
-  = render "teams/team"
+
+  - @teams.each do |team|
+    = render 'team', team: team

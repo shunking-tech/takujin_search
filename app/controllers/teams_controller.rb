@@ -26,6 +26,6 @@ class TeamsController < ApplicationController
   private
 
     def team_params
-      params.require(:team).permit(:team_name, :motivation, :activity_times, :area, :want_gender, :want_experience_period, :want_performance, :searching).merge(user_id: current_user.id)
+      params.require(:team).permit(:team_name, :motivation, :activity_times, :area, :want_gender, :want_experience_period, :want_performance, :searching, :text).merge(user_id: current_user.id)
     end
 end

@@ -1,10 +1,27 @@
 .media.bg-light.shadow-sm.position-relative.mb-3
   %img.mr-3{alt: "...", src: ""}/
   .media-body
-    %h5.mt-0 チーム名
+    %h5.mt-0
+      = team.team_name
     %ul
       %li
         地域:
+        - if team.area == 1
+          大阪
+        - elsif team.area == 2
+          東京
+        - else
+          未設定
       %li
         活動回数:
-    = link_to '詳細を見る', '#', class: 'stretched-link'
+        - if team.activity_times == 1
+          月に1回程度
+        - elsif team.activity_times == 2
+          2週間に1回程度
+        - elsif team.activity_times == 3
+          1週間に1回程度
+        - elsif team.activity_times == 4
+          1週間に2回以上
+        - else
+          月に1回程度
+    = link_to '詳細を見る', team_path(team), class: 'stretched-link'

@@ -12,6 +12,10 @@ Rails.application.routes.draw do
 
   resources :members, only:[:index, :new, :create, :show, :edit, :update]
 
-  resources :teams, only:[:index, :new, :create, :show, :edit, :update]
-
+  resources :teams, only:[:index, :new, :create, :show, :edit, :update] do
+    collection do
+      get :search
+    end
+  end
+  
 end

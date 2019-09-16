@@ -1,0 +1,10 @@
+.container.p-5
+
+  %h2.text-center.rounded-pill.w-50.m-auto.border.border-secondary
+    メンバーの検索条件
+
+  = form_with class: "mt-4" do |f|
+
+    = render 'members/form-members-search', f: f
+
+    = f.submit 'メンバー検索条件を設定'

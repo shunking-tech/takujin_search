@@ -33,6 +33,9 @@ class MembersController < ApplicationController
     redirect_to member_path(@member)
   end
 
+  def search
+    
+  end
 
   private
 

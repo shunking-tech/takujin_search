@@ -47,7 +47,7 @@ class MembersController < ApplicationController
   private
 
     def member_params
-      params.require(:member).permit(:gender, :area, :experience_period, :performance, :motivation, :want_activity_times, :text, :searching).merge(user_id: current_user.id)
+      params.require(:member).permit(:nickname, :gender, :area, :experience_period, :performance, :motivation, :want_activity_times, :text, :searching).merge(user_id: current_user.id)
     end
 
     # 検索結果表示用のストロングパラメーター

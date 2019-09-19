@@ -6,7 +6,13 @@ class TeamsController < ApplicationController
   end
 
   def new
-    @team = Team.new
+    team = Team.find_by(user_id: current_user.id)
+    if team.blank?        # チームが登録されていなければ、新規登録
+      @team = Team.new
+    else                    # チームが登録されていれば、編集
+      @team = team
+      render :edit
+    end
   end
 
   def create
@@ -32,7 +38,7 @@ class TeamsController < ApplicationController
 
     # 全件表示用のストロングパラメーター
     def team_params
-      params.permit(:team_name, :motivation, :activity_times, :area, :want_gender, :want_experience_period, :want_performance, :searching, :text).merge(user_id: current_user.id)
+      params.require(:team).permit(:team_name, :motivation, :activity_times, :area, :want_gender, :want_experience_period, :want_performance, :searching, :text).merge(user_id: current_user.id)
     end
 
     # 検索結果表示用のストロングパラメーター

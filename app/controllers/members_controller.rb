@@ -8,7 +8,13 @@ class MembersController < ApplicationController
 
   # メンバーを新規作成するフォームを表示するアクション
   def new
-    @member = Member.new
+    member = Member.find_by(user_id: current_user.id)
+    if member.blank?        # メンバーが登録されていなければ、新規登録
+      @member = Member.new
+    else                    # メンバーが登録されていれば、編集
+      @member = member
+      render :edit
+    end
   end
 
   # メンバーを新規登録するアクション
@@ -41,7 +47,7 @@ class MembersController < ApplicationController
   private
 
     def member_params
-      params.require(:member).permit(:gender, :area, :experience_period, :performance, :motivation, :want_activity_times, :text, :searching).merge(user_id: current_user.id)
+      params.require(:member).permit(:nickname, :gender, :area, :experience_period, :performance, :motivation, :want_activity_times, :text, :searching).merge(user_id: current_user.id)
     end
 
     # 検索結果表示用のストロングパラメーター

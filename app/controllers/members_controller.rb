@@ -8,7 +8,13 @@ class MembersController < ApplicationController
 
   # メンバーを新規作成するフォームを表示するアクション
   def new
-    @member = Member.new
+    member = Member.find_by(user_id: current_user.id)
+    if member.blank?        # メンバーが登録されていなければ、新規登録
+      @member = Member.new
+    else                    # メンバーが登録されていれば、編集
+      @member = member
+      render :edit
+    end
   end
 
   # メンバーを新規登録するアクション

@@ -3,6 +3,7 @@ class MembersController < ApplicationController
   # メンバ一覧を表示するアクション
   def index
     @members = Member.all
+    @members = @members.search(member_params_search)
   end
 
   # メンバーを新規作成するフォームを表示するアクション
@@ -41,6 +42,11 @@ class MembersController < ApplicationController
 
     def member_params
       params.require(:member).permit(:gender, :area, :experience_period, :performance, :motivation, :want_activity_times, :text, :searching).merge(user_id: current_user.id)
+    end
+
+    # 検索結果表示用のストロングパラメーター
+    def member_params_search
+      params.permit(:motivation, :want_activity_times, :area, :gender, :experience_period, :performance, :searching)
     end
 
 end

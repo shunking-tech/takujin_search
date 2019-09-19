@@ -28,10 +28,6 @@ class TeamsController < ApplicationController
     @team = Team.find(params[:id])
   end
 
-  def search
-    
-  end
-
   private
 
     # 全件表示用のストロングパラメーター

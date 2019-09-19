@@ -1,3 +1,15 @@
+.container.p-5
+
+  %h2.text-center.rounded-pill.w-25.m-auto.border.border-secondary
+    メンバーの検索条件
+
+  = form_with model: @member, url: members_path, method: "get", local: true, class: "mt-4" do |f|
+
+    = render 'members/form-members-search', f: f
+
+    = f.submit 'チーム検索条件を設定'
+
+
 .container
 
   - @members.each do |m|

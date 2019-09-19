@@ -6,16 +6,8 @@ Rails.application.routes.draw do
 
   resources :users, only:[:show]
 
-  resources :members, only:[:index, :new, :create, :show, :edit, :update] do
-    collection do
-      get :search
-    end
-  end
+  resources :members, only:[:index, :new, :create, :show, :edit, :update]
 
-  resources :teams, only:[:index, :new, :create, :show, :edit, :update] do
-    collection do
-      get :search
-    end
-  end
+  resources :teams, only:[:index, :new, :create, :show, :edit, :update]
   
 end

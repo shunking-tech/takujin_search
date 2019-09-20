@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: takujin_search_production
-  username: takujin_search
-  password: <%= ENV['TAKUJIN_SEARCH_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock

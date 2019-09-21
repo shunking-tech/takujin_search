@@ -45,6 +45,9 @@ group :development, :test do
   gem 'pry-rails'
   gem 'pry-byebug'
   gem 'pry-doc'
+
+  # デプロイ用
+  gem 'sqlite3'
 end
 
 group :development do
@@ -68,6 +71,9 @@ end
 # 本番環境のみ
 group :production do
   gem 'unicorn', '5.4.1'
+
+  # デプロイ用
+  gem 'pg'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

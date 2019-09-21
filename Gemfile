@@ -72,7 +72,7 @@ group :production do
   gem 'unicorn', '5.4.1'
 
   # デプロイ用
-  gem 'pg', "1.0.0"
+  gem 'pg', "~> 0.21.0"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

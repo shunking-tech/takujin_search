@@ -69,7 +69,7 @@ end
 
 # 本番環境のみ
 group :production do
-  gem 'unicorn', '5.4.1'
+  # gem 'unicorn', '5.4.1'
 
   # デプロイ用
   gem 'pg', "~> 0.21.0"

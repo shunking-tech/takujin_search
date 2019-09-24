@@ -44,11 +44,8 @@ group :development, :test do
   gem 'pry-byebug'
   gem 'pry-doc'
 
-  # デプロイ用
   # Use mysql as the database for Active Record
   gem 'mysql2', '>= 0.4.4', '< 0.6.0'
-
-  gem 'sqlite3'
 end
 
 group :development do

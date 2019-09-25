@@ -1,24 +1,16 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## 機能一覧
 
-Things you may want to cover:
+  ### 実装済み
 
-* Ruby version
+    - ユーザー登録・ログイン・ログアウト・修正
+    - メンバー(プロフィール)登録・修正・一覧表示・絞り込み検索
+    - チーム登録・修正・一覧表示・絞り込み検索
+  
+  ### 実装予定
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+    - メンバーとチームのチャット
+    - チャットメッセージ送信時の非同期通信
+    - チャットメッセージの自動更新
+    - メンバーとチームの地域を登録

@@ -1,7 +1,8 @@
-.container.p-5
+%main
+  .container.p-5
 
-  = form_with model: @team do |f|
+    = form_with model: @team do |f|
 
-    = render 'teams/form', f: f
+      = render 'teams/form', f: f
 
-    = f.submit 'チーム情報を修正'
+      = f.submit 'チーム情報を修正'

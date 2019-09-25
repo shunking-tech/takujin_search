@@ -1,7 +1,8 @@
-.container.p-5
+%main
+  .container.p-5
 
-  = form_for @member do |f|
+    = form_for @member do |f|
 
-    = render 'members/form', f: f
+      = render 'members/form', f: f
 
-    = f.submit 'プロフィールを変更'
+      = f.submit 'プロフィールを変更'

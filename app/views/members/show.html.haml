@@ -1,99 +1,100 @@
-.container.mt-5
+%main
+  .container.mt-5
 
-  %h2.text-center.rounded-pill.w-25.m-auto.border.border-secondary
-    メンバー詳細
+    %h2.text-center.rounded-pill.w-25.m-auto.border.border-secondary
+      メンバー詳細
 
-  %label.mt-4
-    ニックネーム
-  .card
-    .card-body
-      = @member.nickname
+    %label.mt-4
+      ニックネーム
+    .card
+      .card-body
+        = @member.nickname
 
-  %label.mt-4
-    経験年数
-  .card
-    .card-body
-      - if @member.experience_period == 1
-        1年未満
-      - elsif @member.experience_period == 2
-        1~3年
-      - elsif @member.experience_period == 3
-        3~6年
-      - elsif @member.experience_period == 4
-        6~10年
-      - elsif @member.experience_period == 5
-        10年以上
-      - else
-        未設定
+    %label.mt-4
+      経験年数
+    .card
+      .card-body
+        - if @member.experience_period == 1
+          1年未満
+        - elsif @member.experience_period == 2
+          1~3年
+        - elsif @member.experience_period == 3
+          3~6年
+        - elsif @member.experience_period == 4
+          6~10年
+        - elsif @member.experience_period == 5
+          10年以上
+        - else
+          未設定
 
-  %label.mt-4
-    性別
-  .card
-    .card-body
-      - if @member.gender == 1
-        男性
-      - elsif @member.gender == 2
-        女性
-      - else
-        未設定
+    %label.mt-4
+      性別
+    .card
+      .card-body
+        - if @member.gender == 1
+          男性
+        - elsif @member.gender == 2
+          女性
+        - else
+          未設定
 
-  %label.mt-4
-    地域
-  .card
-    .card-body
-      ※未実装
+    %label.mt-4
+      地域
+    .card
+      .card-body
+        ※未実装
 
-  %label.mt-4
-    実績
-  .card
-    .card-body
-      - if @member.performance == 1
-        試合に出たことが無い
-      - elsif @member.performance == 2
-        ローカルの大会に出たら大体は真ん中より下
-      - elsif @member.performance == 3
-        ローカルの大会に出たら大体は真ん中くらい
-      - elsif @member.performance == 4
-        ローカルの大会に出たら大体は真ん中より上
-      - elsif @member.performance == 5
-        ローカルの大会で上位入賞経験あり
-      - elsif @member.performance == 6
-        全国大会出場経験あり
-      - else
-        未設定
+    %label.mt-4
+      実績
+    .card
+      .card-body
+        - if @member.performance == 1
+          試合に出たことが無い
+        - elsif @member.performance == 2
+          ローカルの大会に出たら大体は真ん中より下
+        - elsif @member.performance == 3
+          ローカルの大会に出たら大体は真ん中くらい
+        - elsif @member.performance == 4
+          ローカルの大会に出たら大体は真ん中より上
+        - elsif @member.performance == 5
+          ローカルの大会で上位入賞経験あり
+        - elsif @member.performance == 6
+          全国大会出場経験あり
+        - else
+          未設定
 
-  %label.mt-4
-    モチベーション
-  .card
-    .card-body
-      - if @member.motivation == 1
-        運動不足解消
-      - elsif @member.motivation == 2
-        たまに大会に出たい
-      - elsif @member.motivation == 3
-        大会に出て、より上位を目指したい
-      - else
-        未設定
+    %label.mt-4
+      モチベーション
+    .card
+      .card-body
+        - if @member.motivation == 1
+          運動不足解消
+        - elsif @member.motivation == 2
+          たまに大会に出たい
+        - elsif @member.motivation == 3
+          大会に出て、より上位を目指したい
+        - else
+          未設定
 
-  %label.mt-4
-    希望活動回数
-  .card
-    .card-body
-      - if @member.want_activity_times == 1
-        月に1回程度
-      - elsif @member.want_activity_times == 2
-        2週間に1回程度
-      - elsif @member.want_activity_times == 3
-        1週間に1回程度
-      - elsif @member.want_activity_times == 4
-        1週間に2回以上
-      - else
-        未設定
+    %label.mt-4
+      希望活動回数
+    .card
+      .card-body
+        - if @member.want_activity_times == 1
+          月に1回程度
+        - elsif @member.want_activity_times == 2
+          2週間に1回程度
+        - elsif @member.want_activity_times == 3
+          1週間に1回程度
+        - elsif @member.want_activity_times == 4
+          1週間に2回以上
+        - else
+          未設定
 
-  .card.mt-4
-    .card-header
-      一言コメント・自己紹介等
-    .card-body
-      %blockquote.blockquote.mb-0
-        %p
-          = @member.text
+    .card.mt-4
+      .card-header
+        一言コメント・自己紹介等
+      .card-body
+        %blockquote.blockquote.mb-0
+          %p
+            = @member.text

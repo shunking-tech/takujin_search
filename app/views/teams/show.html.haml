@@ -1,100 +1,101 @@
-.container.mt-5
+%main
+  .container.mt-5
 
-  %h2.text-center.rounded-pill.w-25.m-auto.border.border-secondary
-    チーム詳細
+    %h2.text-center.rounded-pill.w-25.m-auto.border.border-secondary
+      チーム詳細
 
-  %label.mt-4
-    チーム名
-  .card
-    .card-body
-      = @team.team_name
+    %label.mt-4
+      チーム名
+    .card
+      .card-body
+        = @team.team_name
 
-  %label.mt-4
-    モチベーション
-  .card
-    .card-body
-      - if @team.motivation == 1
-        運動不足解消
-      - elsif @team.motivation == 2
-        たまに大会に出たい
-      - elsif @team.motivation == 3
-        大会に出て、より上位を目指したい
-      - else
-        未設定
+    %label.mt-4
+      モチベーション
+    .card
+      .card-body
+        - if @team.motivation == 1
+          運動不足解消
+        - elsif @team.motivation == 2
+          たまに大会に出たい
+        - elsif @team.motivation == 3
+          大会に出て、より上位を目指したい
+        - else
+          未設定
 
 
-  %label.mt-4
-    活動頻度
-  .card
-    .card-body
-      - if @team.activity_times == 1
-        月に1回程度
-      - elsif @team.activity_times == 2
-        2週間に1回程度
-      - elsif @team.activity_times == 3
-        1週間に1回程度
-      - elsif @team.activity_times == 4
-        1週間に2回以上
-      - else
-        未設定
+    %label.mt-4
+      活動頻度
+    .card
+      .card-body
+        - if @team.activity_times == 1
+          月に1回程度
+        - elsif @team.activity_times == 2
+          2週間に1回程度
+        - elsif @team.activity_times == 3
+          1週間に1回程度
+        - elsif @team.activity_times == 4
+          1週間に2回以上
+        - else
+          未設定
 
-  %label.mt-4
-    地域
-  .card
-    .card-body
-      ※未実装
+    %label.mt-4
+      地域
+    .card
+      .card-body
+        ※未実装
 
-  %label.mt-4
-    希望性別
-  .card
-    .card-body
-      - if @team.want_gender == 1
-        男性
-      - elsif @team.want_gender == 2
-        女性
-      - else
-        未設定
+    %label.mt-4
+      希望性別
+    .card
+      .card-body
+        - if @team.want_gender == 1
+          男性
+        - elsif @team.want_gender == 2
+          女性
+        - else
+          未設定
 
-  %label.mt-4
-    希望経験年数
-  .card
-    .card-body
-      - if @team.want_experience_period == 1
-        1年未満
-      - elsif @team.want_experience_period == 2
-        1~3年
-      - elsif @team.want_experience_period == 3
-        3~6年
-      - elsif @team.want_experience_period == 4
-        6~10年
-      - elsif @team.want_experience_period == 5
-        10年以上
-      - else
-        未設定
+    %label.mt-4
+      希望経験年数
+    .card
+      .card-body
+        - if @team.want_experience_period == 1
+          1年未満
+        - elsif @team.want_experience_period == 2
+          1~3年
+        - elsif @team.want_experience_period == 3
+          3~6年
+        - elsif @team.want_experience_period == 4
+          6~10年
+        - elsif @team.want_experience_period == 5
+          10年以上
+        - else
+          未設定
 
-  %label.mt-4
-    希望実績
-  .card
-    .card-body
-      - if @team.want_performance == 1
-        試合に出たことが無い
-      - elsif @team.want_performance == 2
-        ローカルの大会に出たら大体は真ん中より下
-      - elsif @team.want_performance == 3
-        ローカルの大会に出たら大体は真ん中くらい
-      - elsif @team.want_performance == 4
-        ローカルの大会に出たら大体は真ん中より上
-      - elsif @team.want_performance == 5
-        ローカルの大会で上位入賞経験あり
-      - elsif @team.want_performance == 6
-        全国大会出場経験あり
-      - else
-        未設定
+    %label.mt-4
+      希望実績
+    .card
+      .card-body
+        - if @team.want_performance == 1
+          試合に出たことが無い
+        - elsif @team.want_performance == 2
+          ローカルの大会に出たら大体は真ん中より下
+        - elsif @team.want_performance == 3
+          ローカルの大会に出たら大体は真ん中くらい
+        - elsif @team.want_performance == 4
+          ローカルの大会に出たら大体は真ん中より上
+        - elsif @team.want_performance == 5
+          ローカルの大会で上位入賞経験あり
+        - elsif @team.want_performance == 6
+          全国大会出場経験あり
+        - else
+          未設定
 
-  .card.mt-4
-    .card-header
-      一言コメント・自己紹介等
-    .card-body
-      %blockquote.blockquote.mb-0
-        %p
-          = @team.text
+    .card.mt-4
+      .card-header
+        一言コメント・自己紹介等
+      .card-body
+        %blockquote.blockquote.mb-0
+          %p
+            = @team.text

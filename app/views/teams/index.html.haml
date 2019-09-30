@@ -1,14 +1,15 @@
 %main
   .container.p-5
 
-    %h2.text-center.rounded-pill.w-25.m-auto.border.border-secondary
-      チームの検索条件
+    = link_to 'チームの検索条件', '#form-teams-search', class: "btn btn-primary", 'data-toggle': :collapse, 'role': :button, 'aria-expanded': :false, 'aria-controls': :collapseExample
 
-    = form_with model: @team, url: teams_path, method: "get", local: true, class: "mt-4" do |f|
+    .collapse#form-teams-search
 
-      = render 'teams/form-teams-search', f: f
+      = form_with model: @team, url: teams_path, method: "get", local: true, class: "mt-4" do |f|
 
-      = f.submit 'チーム検索条件を設定'
+        = render 'teams/form-teams-search', f: f
+
+        = f.submit 'チーム検索条件を設定'
 
 
   .container

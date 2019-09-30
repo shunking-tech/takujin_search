@@ -14,13 +14,13 @@
   = f.label :area, "地域："
   = f.select :area, [["大阪", 1], ["東京", 2]], {},  {class: "custom-select"}
 .form-group
-  = f.label :want_gender, "希望性別："
+  = f.label :want_gender, "新メンバーに欲しい性別："
   = f.select :want_gender, [["男", 1], ["女", 2]], {},  {class: "custom-select"}
 .form-group
-  = f.label :want_experience_period, "希望経験年数："
+  = f.label :want_experience_period, "新メンバーに欲しい経験年数："
   = f.select :want_experience_period, [["1年未満", 1], ["1~3年", 2], ["3~6年", 3], ["6~10年", 4], ["10年以上", 5]], {},  {class: "custom-select"}
 .form-group
-  = f.label :want_performance, "希望実績："
+  = f.label :want_performance, "新メンバーに欲しい実績："
   = f.select :want_performance, [["試合に出たことが無い", 1], ["ローカルの大会に出たら大体は真ん中より下", 2], ["ローカルの大会に出たら大体は真ん中くらい", 3], ["ローカルの大会に出たら大体は真ん中より上", 4], ["ローカルの大会で上位入賞経験あり", 5], ["全国大会出場経験あり", 6]], {},  {class: "custom-select"}
 .form-group
   = f.label :text, "コメント(自己PR、自己紹介等)："

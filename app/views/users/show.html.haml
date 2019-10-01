@@ -1,19 +1,29 @@
 %main
-  %h2
-    = current_user.name
-    さんのマイページ
+  .container
+    .mb-5.text-center
+      %h2
+        = current_user.name
+        さんのマイページ
 
-  %p
-    = link_to 'ユーザー情報の編集', edit_user_registration_path
+      %p
+        = link_to 'ユーザー情報の編集', edit_user_registration_path
 
-  %ul.for-search-team
-    %li
-      = link_to 'プロフィール(メンバー情報)の登録・編集', new_member_path
-    %li
-      = link_to 'チームを探す', teams_path
+    .card.mb-3.shadow
+      .card-header チームを探したい時のメニュー
+      .card-body
+        %p.card-text
+          %ul.list-group
+            %li.list-group-item
+              = link_to 'プロフィール(メンバー情報)の登録・編集', new_member_path
+            %li.list-group-item
+              = link_to 'チームを探す', teams_path
 
-  %ul.for-search-member
-    %li
-      = link_to 'チーム情報の登録・編集', new_team_path
-    %li
-      = link_to 'メンバーを探す', members_path
+    .card.mb-3.shadow
+      .card-header メンバーを探したい時のメニュー
+      .card-body
+        %p.card-text
+          %ul.list-group
+            %li.list-group-item
+              = link_to 'チーム情報の登録・編集', new_team_path
+            %li.list-group-item
+              = link_to 'メンバーを探す', members_path

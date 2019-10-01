@@ -43,7 +43,10 @@
       地域
     .card
       .card-body
-        ※未実装
+        - if @team.area == 1
+          大阪
+        - elsif @team.area == 2
+          東京
 
     %label.mt-4
       新メンバーに望む性別
